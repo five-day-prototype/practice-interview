@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= t :brand
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = csrf_meta_tags
+
+  body class="#{params[:controller]}"
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        = link_to t(:brand), root_path, class: 'navbar-brand'
+        .nav-collapse.collapse
+          ul.nav.navbar-nav
+            li= link_to "Sign Up", new_user_registration_path
+            li= link_to "Sign In", new_user_session_path
+    .container
+      - if notice
+        p.notice= notice
+      - if alert
+        p.alert= alert
+      = yield
