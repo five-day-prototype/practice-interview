@@ -21,3 +21,8 @@
 
 en:
   brand: "Practice Interview"
+  errors:
+    messages:
+      unsaved:
+        one: "1 error prohibited this %{model} from being saved:"
+        other: "%{count} errors prohibited this %{model} from being saved:"
