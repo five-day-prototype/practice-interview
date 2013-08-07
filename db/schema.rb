@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130807134715) do
+ActiveRecord::Schema.define(version: 20130807180644) do
+
+  create_table "interviews", force: true do |t|
+    t.integer  "user_id"
+    t.string   "job_url"
+    t.string   "resume_url"
+    t.text     "description"
+    t.string   "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

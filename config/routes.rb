@@ -1,4 +1,6 @@
 PracticeInterview::Application.routes.draw do
+  resources :interviews
+
   devise_for :users
 
   authenticated do

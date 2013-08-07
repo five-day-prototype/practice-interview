@@ -1,2 +1,10 @@
 h1
   | Welcome, #{current_user.first_name}!
+
+h2 Interviews
+= link_to "New Interview", new_interview_path, class: "btn btn-primary"
+
+- if @interviews.any?
+  ul
+    - @interviews.each do |interview|
+      li
