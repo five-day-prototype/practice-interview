@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, presence: true
+
+  def first_name
+    name.split(' ').first
+  end
 end
