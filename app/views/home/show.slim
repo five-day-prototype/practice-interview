@@ -6,4 +6,4 @@ h2 Interviews
       tr
         td= link_to "Interview for #{interview.job_url} @ #{interview.time}", interview_path(interview)
 
-= link_to "New Interview", new_interview_path, class: "btn btn-primary"
+= link_to "New Interview", new_interview_path, class: "btn btn-primary", "data-track" => "clicked_new_interview"

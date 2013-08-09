@@ -6,11 +6,7 @@ class InterviewsController < ApplicationController
   end
 
   def create
-    @interview = current_user.interviews.build interview_params
-
-    if @interview.save
-      flash[:notice] = "Successfully created interview."
-    end
+    @interview = current_user.interviews.create interview_params
 
     respond_with @interview
   end
