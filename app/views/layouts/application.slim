@@ -9,7 +9,7 @@ html
 
   body class="#{params[:controller]}"
     #wrap
-      .navbar.navbar-fixed-top
+      .navbar
         .container
           = link_to t(:brand), root_path, class: 'navbar-brand'
           .nav-collapse.collapse
@@ -27,7 +27,8 @@ html
             = notice
         - if alert
           p.alert.alert-danger= alert
-        = yield
+
+      = yield
 
       #push
 
