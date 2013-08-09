@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   layout 'public', only: :index
 
   def index
-
   end
 
   def show

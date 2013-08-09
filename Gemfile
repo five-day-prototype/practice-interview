@@ -13,6 +13,8 @@ gem 'font-awesome-rails'
 
 gem 'devise'
 
+gem 'mixpanel'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

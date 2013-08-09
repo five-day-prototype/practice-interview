@@ -6,6 +6,10 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = csrf_meta_tags
+    javascript:
+      $(function(){
+        mixpanel.track('visited_landing_page');
+      });
 
   body class="public #{params[:controller]}"
     #wrap
@@ -17,7 +21,7 @@ html
               - if current_user
                 li= link_to "Sign Out", destroy_user_session_path, method: :delete
               - else
-                li= link_to "Sign Up", new_user_registration_path
+                li= link_to "Sign Up", new_user_registration_path, "data-track" => "clicked_header_cta"
                 li= link_to "Sign In", new_user_session_path
 
       = yield

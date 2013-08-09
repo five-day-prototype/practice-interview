@@ -19,5 +19,5 @@ h2 Sign up
     = f.label :password_confirmation
     = f.password_field :password_confirmation, class: "form-control"
   .form-group
-    = f.submit "Sign up", class: "btn btn-primary"
+    = f.submit "Sign up", class: "btn btn-primary", "data-track" => "signed_up"
 = render "devise/shared/links"
