@@ -7,7 +7,7 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = csrf_meta_tags
     javascript:
-      $(function(){
+      $(document).on("page:load", function(){
         mixpanel.track('visited_landing_page');
       });
 
