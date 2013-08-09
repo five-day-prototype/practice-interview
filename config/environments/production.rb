@@ -74,4 +74,8 @@ PracticeInterview::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.to_prepare do
+    ApplicationController.instance_eval { include MixpanelEvents }
+  end
 end
