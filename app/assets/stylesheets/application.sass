@@ -5,3 +5,29 @@
 @import "font-awesome"
 
 @import "home"
+
+.welcome
+  p
+    font-size: 18px
+
+  ol.steps
+    text-align: center
+    padding: 0
+    margin: 30px 0
+    li
+      display: inline-block
+      padding: 10px 15px
+      list-style-position: inside
+      border-radius: 100px
+      background: #eee
+      color: #ccc
+      cursor: default
+
+      &.selected
+        background: $brand-primary
+        color: #fff
+
+    li.spacer
+      margin-top: 15px
+      padding: 5px
+      border-radius: 0

@@ -8,5 +8,6 @@ class HomeController < ApplicationController
 
   def show
     @interviews = current_user.interviews
+    redirect_to new_interview_path if @interviews.empty?
   end
 end

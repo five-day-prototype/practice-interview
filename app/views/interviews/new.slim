@@ -1,19 +1,27 @@
-h2 New Interview
-= form_for @interview do |f|
-  = error_messages_for @interview
-  .form-group
-    = f.label :job_url
-    = f.text_field :job_url, autofocus: true, class: "form-control"
-  .form-group
-    = f.label :resume_url
-    = f.text_field :resume_url, class: "form-control"
-  .form-group
-    = f.label :description
-    = f.text_area :description, rows: 8, class: "form-control"
-  .form-group
-    = f.label :time
-    span.text-muted
-      |  (ex: tomorrow afternoon, Thursday at 2)
-    = f.text_field :time, class: "form-control"
-  .form-group
-    = f.submit "Submit", class: "btn btn-primary"
+- if current_user.interviews.length == 1 # there's only the one for this form
+  .welcome.panel
+    h3 Welcome to #{t :brand}!
+    p.text-muted to get started, we just need to know a few things about your upcoming interview. After that, we'll be in touch to schedule your <em>free</em> mock interview.
+
+
+.row
+  .col-lg-6.col-lg-offset-3
+    h2 New Interview
+    = form_for @interview do |f|
+      = error_messages_for @interview
+      .form-group
+        = f.label :job_url
+        = f.text_field :job_url, autofocus: true, class: "form-control"
+      .form-group
+        = f.label :resume_url
+        = f.text_field :resume_url, class: "form-control"
+      .form-group
+        = f.label :description
+        = f.text_area :description, rows: 8, class: "form-control"
+      .form-group
+        = f.label :time
+        span.text-muted
+          |  (ex: tomorrow afternoon, Thursday at 2)
+        = f.text_field :time, class: "form-control"
+      .form-group
+        = f.submit "Submit", class: "btn btn-primary"

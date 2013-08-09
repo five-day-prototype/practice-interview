@@ -1,12 +1,24 @@
-dl.dl-horizontal
-  dt Job URL
-  dd= @interview.job_url
+.welcome.panel
+  h3.text-center We've received your interview request!
+  p.text-muted.text-center We'll be in touch soon to confirm your interview schedule. 
+  ol.steps.row
+    li.col-lg-2.col-lg-offset-2.selected 1. Tell Us About Your Job
+    li.col-lg-1.spacer.selected
+    li.col-lg-2.selected 2. Schedule an Interview
+    li.col-lg-1.spacer
+    li.col-lg-2 3. Get Great Feedback!
 
-  dt Resume URL
-  dd= @interview.resume_url
+  .row
+    .well.col-lg-4.col-lg-offset-4
+      dl.dl-horizontal
+        dt Job URL
+        dd= @interview.job_url
 
-  dt Description
-  dd= @interview.description
+        dt Resume URL
+        dd= @interview.resume_url
 
-  dt Time
-  dd= @interview.time
+        dt Description
+        dd= @interview.description
+
+        dt Time
+        dd= @interview.time
