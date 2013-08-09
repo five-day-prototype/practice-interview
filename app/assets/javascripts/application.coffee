@@ -20,7 +20,3 @@
 $ ->
   $(document).trigger 'page:change'
   $(document).trigger 'page:load'
-
-$(document).on 'click', '[data-track]', ->
-  console.log $(@).data()
-  mixpanel.track $(@).data('track')

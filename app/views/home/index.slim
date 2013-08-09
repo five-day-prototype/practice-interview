@@ -2,7 +2,7 @@
   .jumbotron
     h1 Get hired faster.
     p Practice interviews with working professionals from your field.
-    = link_to new_user_registration_path, class: "btn btn-primary btn-lg", "data-track" => "clicked_primary_cta" do
+    = link_to new_user_registration_path(position: "primary"), class: "btn btn-primary btn-lg" do
       | Try it free! &nbsp;
       i.icon-circle-arrow-right
     span.hint
@@ -40,4 +40,4 @@
     .row.cta
       .well
         h3 Now interviewing: designers and developers.
-        = link_to "Sign up now", new_user_registration_path, class: "btn btn-primary btn-lg", "data-track" => "clicked_secondary_cta"
+        = link_to "Sign up now", new_user_registration_path(position: "secondary"), class: "btn btn-primary btn-lg", position: "secondary"
