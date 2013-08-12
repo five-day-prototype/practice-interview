@@ -6,7 +6,7 @@ module MixpanelEvents
 
   private
     def track_visited_landing_page
-      mixpanel.track 'visited_landing_page'
+      mixpanel.track 'visited_landing_page', source: params[:source] || 'direct'
     end
 
     def track_clicked_cta
