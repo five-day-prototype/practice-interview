@@ -14,19 +14,21 @@
         = f.label :job_url, "What position are you applying for?"
         span.text-muted
           |  (Job URL or title)
-        = f.text_field :job_url, autofocus: true, class: "form-control"
+        = f.text_field :job_url, autofocus: true, required: true, class: "form-control"
       .form-group
         = f.label :resume_url, "What's your LinkedIn profile URL?"
         span.text-muted
           |  (or other resume URL)
-        = f.text_field :resume_url, class: "form-control"
+        = f.text_field :resume_url, required: true, class: "form-control"
       .form-group
         = f.label :description, "Tell us more about the job"
+        span.text-muted
+          |  (optional)
         = f.text_area :description, rows: 8, class: "form-control"
       .form-group
         = f.label :time, "When do you want to interview?"
         span.text-muted
           |  (ex: tomorrow afternoon, Thursday at 2)
-        = f.text_field :time, class: "form-control"
+        = f.text_field :time, required: true, class: "form-control"
       .form-group
         = f.submit "Submit", class: "btn btn-primary", "data-track" => "created_interview"
