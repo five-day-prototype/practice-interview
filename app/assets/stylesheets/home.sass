@@ -3,7 +3,7 @@
 
 html, body
   height: 100%
-  background: #f5f5f5
+  background: #f9f9f9
 
 ul
   list-style-type: none
@@ -15,8 +15,11 @@ ul
   margin: 0 auto -60px
 
   body.home.public &
-    background: transparent image_url("bg.jpg") 0 -75px no-repeat
+    background: transparent image_url("bg4.jpg") 0 0 no-repeat
     background-size: contain
+
+    @media screen and (max-width: 768px)
+      background-size: cover
 
   #push
     height: 60px
@@ -24,7 +27,7 @@ ul
   .navbar
     background-color: #333
     .public.home & 
-      background-color: rgba(0,0,0, .3)
+      background-color: rgba(0,0,0, 0)
     a
       color: #eee
 
@@ -36,7 +39,7 @@ ul
     border-radius: 0
     color: whitesmoke
     margin: 25px 0 175px
-    text-shadow: darken(whitesmoke, 60%) 1px 1px 2px
+    text-shadow: darken(whitesmoke, 85%) 1px 1px 2px
 
     h1
       font-size: 48px
@@ -61,12 +64,19 @@ ul
 .content
   background: #eaeaea
   padding: 80px 0 30px
+  border-top: 2px solid lighten(complement($brand-primary), 15%)
 
 .detail.panel
   float: left
   width: 30%
   min-height: 180px
   border: none
+
+  @media screen and (max-width: 768px)
+    width: 90%
+    margin: 0 auto
+    margin-left: auto !important
+    margin-bottom: 60px
 
   .panel-heading
     background: none
